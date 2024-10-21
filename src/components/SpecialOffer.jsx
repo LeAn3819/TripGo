@@ -9,7 +9,7 @@ const SpecialOffer = () => {
     // Sao chép mảng favorites hiện tại
     const newFavorites = [...favorites];
     // Đổi trạng thái của card tương ứng
-    newFavorites[index] = !newFavorites[index];
+    newFavorites[index] = !newFavorites[index]; 
     // Cập nhật lại state
     setFavorites(newFavorites);
   };
@@ -48,14 +48,14 @@ const SpecialOffer = () => {
               {/* Nút trái tim */}
               <button
                 className="absolute top-4 right-4 bg-white p-2 rounded-full shadow"
-                onClick={() => toggleFavorite(index)} 
+                onClick={() => toggleFavorite(index)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
-                  fill={favorites[index] ? "#ff6b6b" : "white"} 
+                  fill={favorites[index] ? "#ff6b6b" : "white"}
                   viewBox="0 0 24 24"
-                  stroke="#ff6b6b" 
+                  stroke="#ff6b6b"
                 >
                   <path
                     fillRule="evenodd"

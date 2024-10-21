@@ -2,7 +2,7 @@
 const Navbar = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-screen "
+      className="relative bg-cover bg-center h-[583px] "
       style={{
         backgroundImage: "url('public/pexels-francesco-ungaro-2835436 1.png')",
       }}

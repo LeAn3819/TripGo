@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Header = () => {
   return (
     <header className=" p-4 flex justify-between items-center">
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 ml-[100px]">
         <img src="logo.png" />
 
         {/* Input search */}
@@ -25,7 +25,7 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="flex items-center space-x-4">
+      <nav className="flex items-center space-x-4 mr-[100px]">
         <a href="#" className="text-gray-600 hover:text-gray-800 font-bold">
           VN|VND
         </a>
