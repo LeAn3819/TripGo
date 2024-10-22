@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import locationIcon from "@iconify/icons-mdi/map-marker"; // Biểu tượng vị trí
 import starIcon from "@iconify/icons-mdi/star"; // Biểu tượng sao

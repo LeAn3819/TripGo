@@ -9,7 +9,7 @@ const SpecialOffer = () => {
     // Sao chép mảng favorites hiện tại
     const newFavorites = [...favorites];
     // Đổi trạng thái của card tương ứng
-    newFavorites[index] = !newFavorites[index]; 
+    newFavorites[index] = !newFavorites[index];
     // Cập nhật lại state
     setFavorites(newFavorites);
   };
