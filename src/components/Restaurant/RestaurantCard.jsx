@@ -8,11 +8,11 @@ import clockIcon from "@iconify/icons-mdi/clock-time-four"; // Biểu tượng �
 
 const RestaurantCard = ({ restaurant }) => {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-white w-[310px] h-[410px] ">
+    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded-xl overflow-hidden shadow-lg bg-white w-full h-auto ">
       {/* Hình ảnh nhà hàng */}
       <div className="relative">
         <img
-          className="w-full h-[160px] object-cover "
+          className="w-full h-[160px] object-cover"
           src={restaurant.imageUrl}
           alt={restaurant.name}
         />
@@ -22,7 +22,7 @@ const RestaurantCard = ({ restaurant }) => {
       </div>
 
       {/* Nội dung */}
-      <div className="p-6 ">
+      <div className="p-6">
         <h2 className="text-2xl font-bold text-blue-900">{restaurant.name}</h2>
         <div className="text-sm flex mt-1">
           <Icon
@@ -70,7 +70,7 @@ const RestaurantCard = ({ restaurant }) => {
           />
           <p className="text-green-500 ml-1">{restaurant.status}</p>
         </div>
-        <button className="h-[43px] w-[110px]   bg-blue-900 text-white  rounded-2xl hover:bg-blue-700 ml-[145px]">
+        <button className="h-[43px] w-[110px] bg-blue-900 text-white rounded-2xl hover:bg-blue-700 ml-[140px] mt-2 ">
           Xem chi tiết
         </button>
       </div>

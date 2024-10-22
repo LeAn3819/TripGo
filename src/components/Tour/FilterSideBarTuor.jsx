@@ -1,25 +1,26 @@
 import { useState } from "react";
 
-const FilterSidebarRestaurant = () => {
+const FilterSideBarTour = () => {
   const [priceRange, setPriceRange] = useState([0, 24000000]); // Trạng thái để quản lý khoảng giá
 
-  const popularFilters = [
-    "Nhà Hàng",
-    "Món Tráng Miệng",
-    "Quán Bar & quán rượu",
-    "Cà phê & trà",
-    "Đồ ăn nhanh",
-    "Tiệm bánh",
+  const tour_type = [
+    "Tour mạo hiểm",
+    "Tuor văn hóa",
+    "Tour nghỉ dưỡng",
+    "Tour sinh thái",
+    "Tour đi thuyền",
+    "Tour ẩm thực",
+    "Tour khám phá đảo",
   ];
   const ratings = ["3.0+", "3.5+", "4.0+", "4.5+"];
-  const meal = ["Bữa sáng", "Bữa Trưa", "Bữa tối"];
-  const type_of_food = [
-    "Ẩm thực Á",
-    "Ẩm thực Âu",
-    "Ẩm thực Mỹ",
-    "Ẩm thực Khác",
+  const time = ["Tour nữa ngày", "Tour trong ngày", "Tour nhiều ngày"];
+  const service = [
+    "Tour riêng",
+    "Đón tại khách sạn ",
+    "Hoàn tiền dễ dàng",
+    "Đảm bảo khới hành",
   ];
-  const status = ["Đang mở cửa"];
+  const language = ["Hưỡng dẫn tiếng anh", "Hưỡng dẫn tiếng việt"];
 
   // Hàm xử lý khi người dùng thay đổi giá trị thanh trượt
   const handlePriceChange = (e) => {
@@ -79,11 +80,11 @@ const FilterSidebarRestaurant = () => {
             </div>
           </div>
 
-          {/* Bộ lọc Loại cơ sở */}
+          {/* Bộ lọc Loại hình Tour */}
           <div className="mb-6">
-            <h4 className="font-medium text-2xl text-center">Loại Cơ Sở</h4>
+            <h4 className="font-medium text-2xl text-center">Loại hình tour</h4>
             <div className="mt-4">
-              {popularFilters.map((filter, idx) => (
+              {tour_type.map((filter, idx) => (
                 <div key={idx} className="flex items-center mb-2">
                   <input type="checkbox" id={filter} className="mr-2 w-6 h-6" />
                   <label htmlFor={filter} className="text-base">
@@ -94,11 +95,11 @@ const FilterSidebarRestaurant = () => {
             </div>
           </div>
 
-          {/* bộ lọc bữa ăn */}
+          {/* bộ lọc thời gian */}
           <div className="mb-6">
-            <h4 className="font-medium text-2xl text-center">Bữa ăn</h4>
+            <h4 className="font-medium text-2xl text-center">Thời gian</h4>
             <div className="mt-2">
-              {meal.map((amenity, idx) => (
+              {time.map((amenity, idx) => (
                 <div key={idx} className="flex items-center mb-2">
                   <input
                     type="checkbox"
@@ -113,26 +114,9 @@ const FilterSidebarRestaurant = () => {
             </div>
           </div>
 
-          {/* bộ lọc loại món ăn */}
+          {/* Điểm đánh gia*/}
           <div className="mb-6">
-            <h4 className="font-medium text-2xl text-center">Kiểu món ăn</h4>
-            <div className="mt-2">
-              {type_of_food.map((type, idx) => (
-                <div key={idx} className="flex items-center mb-2">
-                  <input type="checkbox" id={type} className="mr-2 w-6 h-6" />
-                  <label htmlFor={type} className="text-base">
-                    {type}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* xếp hạng của khách hàng */}
-          <div className="mb-6">
-            <h4 className="font-medium text-2xl text-center">
-              Xếp hạng của khách
-            </h4>
+            <h4 className="font-medium text-2xl text-center">Điểm đánh giá</h4>
             <div className="flex space-x-2 mt-2">
               {ratings.map((score, idx) => (
                 <button
@@ -144,12 +128,14 @@ const FilterSidebarRestaurant = () => {
               ))}
             </div>
           </div>
-
-          {/* Trạng thái */}
+          
+          {/* Ngôn ngữ hưỡng dẫn */}
           <div className="mb-6">
-            <h4 className="font-medium text-2xl text-center">Trạng thái</h4>
+            <h4 className="font-medium text-2xl text-center">
+              Ngôn ngữ hưỡng dẫn
+            </h4>
             <div className="mt-2">
-              {status.map((area, idx) => (
+              {language.map((area, idx) => (
                 <div key={idx} className="flex items-center mb-2">
                   <input type="checkbox" id={area} className="mr-2 w-6 h-6" />
                   <label htmlFor={area} className="text-base">
@@ -159,9 +145,25 @@ const FilterSidebarRestaurant = () => {
               ))}
             </div>
           </div>
+
+          {/* bộ lọc Dịch vụ khới hành*/}
+          <div className="mb-6">
+            <h4 className="font-medium text-2xl text-center">Dịch vụ khới hành</h4>
+            <div className="mt-2">
+              {service.map((type, idx) => (
+                <div key={idx} className="flex items-center mb-2">
+                  <input type="checkbox" id={type} className="mr-2 w-6 h-6" />
+                  <label htmlFor={type} className="text-base">
+                    {type}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   );
 };
-export default FilterSidebarRestaurant;
+export default FilterSideBarTour;
